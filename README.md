@@ -4,16 +4,20 @@
 ## Autores:
  - Graffigna Facundo
  - Llancaman Agustin
-## Link de gh-pages: [link de la pagina](https://ucc-labcompu2.github.io/proyecto2023-llancaman-graffigna/TRABAJO/Index.html)
+## Link de gh-pages: [Link de la pagina](https://ucc-labcompu2.github.io/proyecto2023-llancaman-graffigna/TRABAJO/Index.html)
 ## Contenido de la pagina:
 - Ofrece un vistazo rapido del establecimiento, como la variedad de cortes de carne, los acompañamientos y los precios. Además, los usuarios pueden reservar una mesa en línea, ver el horario para dicha reserva, y encontrar información sobre la ubicación y cómo llegar allí. También pueden ver fotos de los platos del menú.
 ## Tecnologias implementadas:
-- google
-- chatgpt
-- github
-- unplashed
-- figma
-- midjourney
+- Google
+- Chatgpt
+- Github
+- Unplashed
+- Figma
+- Midjourney
+- Youtube
+- Visual Studio Code
+- Html
+- Css
 
 # proyecto2023
 Estructura de Proyecto Lab de Compu II - 2023
