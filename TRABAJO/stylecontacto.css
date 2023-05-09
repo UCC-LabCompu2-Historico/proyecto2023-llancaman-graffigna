@@ -109,6 +109,6 @@ border-radius: 50%;
 
 .rede {
   margin: 100px;
-  max-height: 60px; /* ajustar el tamaño de la imagen al alto del footer */
-  max-width: 60px; /* ajustar el tamaño de la imagen al ancho del footer */
+  max-height: 60px; 
+  max-width: 60px; 
 }
