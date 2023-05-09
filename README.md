@@ -2,7 +2,8 @@
 ## Titulo del proyecto:
  - El fogon restaurante.
 ## Autores:
- - Graffigna Facundo--Llancaman Agustin
+ - Graffigna Facundo
+ - Llancaman Agustin
 ## Link de gh-pages: [link de la pagina](https://ucc-labcompu2.github.io/proyecto2023-llancaman-graffigna/TRABAJO/Index.html)
 ## Contenido de la pagina:
 - Ofrece el establecimiento, como la variedad de cortes de carne, los acompañamientos , y los precios. Además, los usuarios pueden reservar una mesa en línea, ver el horario para dicha reserva, y encontrar información sobre la ubicación y cómo llegar allí. También pueden ver fotos de los platos del menú.
@@ -29,9 +30,9 @@ Estructura de Proyecto Lab de Compu II - 2023
 
 ### Sobre el Proyecto General
 - [x] La página principal debe llamarse index
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [x] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [x] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
+- [x] Se debe emplear algún favicon
 - [x] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [x] Debe haber navegación entre todas las páginas
 
