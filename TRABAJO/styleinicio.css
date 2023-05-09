@@ -120,7 +120,7 @@ p.parte2{
   color: #fff;
   font-size: 35px;
   font-family: light italic;
-  text-align: center; /* centrar el texto horizontalmente */
+  text-align: center; 
  margin-top: 9px;
 }
 
@@ -140,7 +140,7 @@ article.parte3{
 img.parte3{
   width: 542px;
   height: 478px;
-  margin-left: 100px; /* Ajusta el valor a tu gusto */
+  margin-left: 100px; 
   position: absolute;
 }
 
