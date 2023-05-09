@@ -1,8 +1,15 @@
 # Informacion del proyecto
 Titulo del proyecto: El fogon restaurante.
 Autores: Graffigna Facundo--Llancaman Agustin
-Link de gh-pages: https://github.com/UCC-LabCompu2/proyecto2023-llancaman-graffigna
-Contenido de la pagina: 
+Link de gh-pages: 
+Contenido de la pagina: Ofrece el establecimiento, como la variedad de cortes de carne, los acompañamientos , y los precios. Además, los usuarios pueden reservar una mesa en línea, ver el horario para dicha reserva, y encontrar información sobre la ubicación y cómo llegar allí. También pueden ver fotos de los platos del menú.
+Tecnologias usadas:
+-google
+-chatgpt
+-github
+-unplashed
+-figma
+-midjourney
 
 # proyecto2023
 Estructura de Proyecto Lab de Compu II - 2023
@@ -10,18 +17,18 @@ Estructura de Proyecto Lab de Compu II - 2023
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
-- [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
-- [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
+- [x] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
+- [x] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [x] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
 - [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
-- [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
+- [x] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
 
 ### Sobre el Proyecto General
-- [ ] La página principal debe llamarse index
+- [x] La página principal debe llamarse index
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
+- [x] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [x] Se debe emplear algún favicon
 - [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [ ] Debe haber navegación entre todas las páginas
 
