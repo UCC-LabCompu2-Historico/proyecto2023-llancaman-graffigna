@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+}
+
+
+
+a{
+  text-shadow: 1px 1px 1px #000000;
+  text-decoration: none;
+  color: black;
+  font-weight: 600 ;
+  margin-right: 10px;
+  
+}
+a.inicio{
+  margin-right: 800px;
+  text-shadow: 1px 1px 1px #000000;
+}
+a:hover{
+  color: white;
+}
+
+header{
+display: flex; 
+min-height: 70px;
+background-color: #3A3434;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+
+}
+
+nav.avenida{
+  background-color: black; 
+  color: #fff; 
+  padding: 10px; 
+  position: relative;
+  top: 0px; 
+  text-align: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+height: 70px;  
+margin-right: 10px;
+border-radius: 50%;
+}
+
+#contacto {
+    background-color: #f2f2f2;
+    padding: 50px;
+  }
+  
+  #contacto h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  #contacto form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  #contacto label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #contacto input[type="submit"] {
+    background-color: black;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.lolito{
+  width: 1536px; 
+  height: 91px; 
+  background-color: #3A3434;
+  margin-bottom: 0cm;
+
+}
+
+.lolito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0cm;
+}
+
+.lol {
+  margin: 100px;
+  max-height: 60px; /* ajustar el tamaño de la imagen al alto del footer */
+  max-width: 60px; /* ajustar el tamaño de la imagen al ancho del footer */
+}
