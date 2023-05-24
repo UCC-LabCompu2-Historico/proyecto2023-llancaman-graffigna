@@ -62,7 +62,7 @@
   h2 {
     text-align: center;
   }
-  .grid-container {
+  .menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1em;
@@ -72,23 +72,23 @@
   }
   
   
-  .location-listing {
+  .objeto {
     position: relative;
   }
   
-  .location-image {
+  .foto {
     line-height: 0;
     overflow: hidden;
    
   }
   
-  .location-image img {
+  .fot img {
     filter: blur(0px);
     transition: filter 0.3s ease-in;
     transform: scale(1.1);
   }
   
-  .location-title {
+  .titulo {
     font-size: 1.5em;
     font-weight: bold;
     text-decoration: none;
@@ -109,21 +109,21 @@
     justify-content: center;
   }
   
-  .location-listing:hover .location-title {
+  .objeto:hover .titulo {
     opacity: 1;
   }
   
-  .location-listing:hover .location-image img {
+  .objeto:hover .foto img {
     filter: blur(2px);
   }
   
   
   
   @media (hover: none) { 
-    .location-title {
+    .titulo {
       opacity: 1;
     }
-    .location-image img {
+    .foto img {
       filter: blur(2px);
     }
   }
