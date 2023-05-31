@@ -1,119 +1,136 @@
-body{
-    margin: 0;
-    background-color: #A1744A;
- 
-  }
-  
-  
-  
-  a{
-    text-shadow: 1px 1px 1px #000000;
-    text-decoration: none;
-    color: black;
-    font-weight: 600 ;
-    margin-right: 10px;
-    
-  }
-  a.inicio{
-    margin-right: 800px;
-    text-shadow: 1px 1px 1px #000000;
-  }
-  a:hover{
-    color: white;
-  }
-  
-  header{
-  display: flex; 
+body {
+  margin: 0;
+  background-image: url(./FOTOS/carta-menu.png);
+}
+
+a {
+  text-shadow: 1px 1px 1px #000000;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin-right: 10px;
+}
+a.inicio {
+  margin-right: 800px;
+  text-shadow: 1px 1px 1px #000000;
+}
+a:hover {
+  color: white;
+}
+
+header {
+  display: flex;
   min-height: 70px;
-  background-color: #3A3434;
+  background-color: #3a3434;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  
-  
-  }
-  
-  nav.avenida{
-    background-color: black; 
-    color: #fff; 
-    padding: 10px; 
-    position: relative;
-    top: 0px; 
-    text-align: center;
-  }
-  
-  .logo{
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img{
-  height: 70px;  
+}
+
+nav.avenida {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  top: 0px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
   margin-right: 10px;
   border-radius: 50%;
-  }
+}
 
-  .reservation-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
+#miFormulario {
+  max-width: 580px;
+  margin-top: 100px;
+  margin-left: 470px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#miFormulario label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#miFormulario input[type="text"],
+#miFormulario input[type="email"],
+#miFormulario input[type="time"],
+#miFormulario input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 550px;
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton2 {
+  margin-left: 600px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #101114;
+  color: #ffffff;
+  text-decoration: none;
+  width: 340px;
+  border-radius: 4px;
+}
+
+#miFormulario button[type="submit"]:hover {
+  background-color: #1ade24;
+}
+
+#mensaje {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f50606;
+  border: 1px solid #ec0303;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.animacion {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .reservation-image {
-    flex: 1;
-    margin-right: 50px;
+  100% {
+    opacity: 1;
   }
-  
-  .reservation-image img {
-    max-width: 100%;
-    margin-left: 50px;
-    border-radius: 40px;
-  }
-  
-  .reservation-form {
-    flex: 1;
-  }
-  
-  .reservation-form h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 50px;
-  }
-  
-  .reservation-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .reservation-form label {
-    margin-top: 10px;
-    
-  }
-  
-  .reservation-form input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .reservation-form button {
-    background-color: #11100e;
-    color: #fff;
-    padding: 30px 100px;
-    font-size: 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .reservation-form button:hover {
-    background-color: #d35400;
-  }
- 
-  
+}
+
+.invalido {
+  background-color: red;
+}
+
+#lienzo {
+  border: 1px solid black;
+  margin-top: 100px;
+}
