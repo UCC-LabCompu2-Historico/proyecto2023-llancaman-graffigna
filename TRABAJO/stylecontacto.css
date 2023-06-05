@@ -68,12 +68,19 @@ nav.avenida {
   margin-bottom: 5px;
 }
 
-#contacto input,
-#contacto textarea {
+#contacto input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #662828;
+  border-radius: 5px;
+}
+#contacto textarea {
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  font-size: 16px;
+  border: 1px solid #662828;
   border-radius: 5px;
 }
 
