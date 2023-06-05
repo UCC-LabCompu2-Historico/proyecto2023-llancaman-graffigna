@@ -2,7 +2,6 @@
  * Agrega un evento de envío al formulario para prevenir el comportamiento predeterminado.
  * @method agregarEventoEnvioFormulario
  * @param {Event} event - El evento de envío del formulario.
- * @return {void}
  */
 
 document
@@ -13,10 +12,11 @@ document
     /**
      * Obtiene los valores ingresados en los campos del formulario.
      * @method obtenerValoresFormulario
-     * @return {Object} - Un objeto con las propiedades `nombre`, `email` y `asunto` que contienen los valores ingresados en los campos del formulario.
+     * @return {Object} - Un objeto con las propiedades `nombre`, `email`,  `asunto` y `mensaje` que contienen los valores ingresados en los campos del formulario.
      */
 
     var nombre = document.getElementById("nombre").value;
+    var mensaje2 = document.getElementById("mensaje2").value;
     var email = document.getElementById("email").value;
     var asunto = document.getElementById("asunto").value;
 
@@ -26,10 +26,10 @@ document
      * @param {string} nombre - El nombre ingresado en el formulario.
      * @param {string} email - El correo electrónico ingresado en el formulario.
      * @param {string} asunto - El asunto ingresado en el formulario.
-     * @return {void}
+     * @param {string} mensaje - El mensaje ingresado en el formulario.
      */
 
-    if (nombre && email && asunto) {
+    if (nombre && email && asunto && mensaje2) {
       mostrarMensaje("¡Muchas gracias por completar el formulario!");
       document.getElementById("miFormulario").reset();
     } else {
@@ -43,7 +43,6 @@ document
  * Muestra un mensaje en pantalla con animación.
  * @method mostrarMensaje
  * @param {string} mensaje - El mensaje a mostrar.
- * @return {void}
  */
 
 function mostrarMensaje(mensaje) {
