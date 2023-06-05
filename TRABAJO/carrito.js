@@ -16,8 +16,12 @@ let total = 0;
  * @param {string} nombre - El nombre del producto a agregar.
  * @param {number} precio - El precio del producto a agregar.
  */
-
 function agregarAlCarrito(nombre, precio) {
+  if (carrito.length >= 6) {
+    alert("No puedes agregar más de 6 productos al carrito.");
+    return;
+  }
+
   carrito.push({ nombre, precio });
   total += precio;
   actualizarCarrito();
@@ -27,7 +31,6 @@ function agregarAlCarrito(nombre, precio) {
  * Actualiza el contenido del carrito de compras en la página.
  * @method actualizarCarrito
  */
-
 function actualizarCarrito() {
   const listaCarrito = document.getElementById("lista-carrito");
   const totalCarrito = document.getElementById("total-carrito");
@@ -43,10 +46,35 @@ function actualizarCarrito() {
 }
 
 /**
+ * Actualiza el contenido del ticket con la información del carrito.
+ * @method actualizarTicket
+ */
+function actualizarTicket() {
+  const canvas = document.getElementById("ticket");
+  const context = canvas.getContext("2d");
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  context.font = "14px Arial";
+
+  let yPos = 20;
+
+  carrito.forEach((item, index) => {
+    context.fillText(
+      `${item.nombre} - Precio: $${item.precio.toFixed(2)}`,
+      20,
+      yPos
+    );
+    yPos += 20;
+  });
+
+  context.fillText(`Total: $${total.toFixed(2)}`, 20, yPos + 10);
+}
+
+/**
  * Vacía el carrito de compras, eliminando todos los productos y reiniciando el total.
  * @method vaciarCarrito
  */
-
 function vaciarCarrito() {
   carrito = [];
   total = 0;
@@ -58,61 +86,41 @@ function vaciarCarrito() {
  * @method obtenerBotonCompra
  * @return {HTMLElement} - El elemento del botón de compra.
  */
-
 const botonCompra = document.getElementById("boton-compra");
-const mensajeCompra = document.getElementById("mensaje-compra");
-const ticketCanvas = document.getElementById("ticket");
 
 /**
- * Obtiene el elemento del botón de compra.
- * @method obtenerBotonCompra
- * @return {HTMLElement} - El elemento del botón de compra.
+ * Agrega un evento de clic al botón de compra para realizar acciones cuando se presiona.
+ * @method agregarEventoClickBotonCompra
  */
-
 botonCompra.addEventListener("click", function () {
+  if (carrito.length < 1) {
+    alert("Debes agregar al menos 1 producto al carrito.");
+    return;
+  }
+
   botonCompra.classList.add("animacion");
-  generarTicket();
-  vaciarCarrito();
-  setTimeout(function () {
-    mostrarMensajeCompra();
-    botonCompra.classList.remove("animacion");
-  }, 500);
+  actualizarTicket(); // Actualizar el contenido del ticket
+  carrito = [];
+  total = 0;
+  actualizarCarrito();
 });
 
 /**
- * Muestra el mensaje de compra en pantalla con animaciones.
- * @method mostrarMensajeCompra
+ * Obtiene los elementos de los botones de productos.
+ * @method obtenerBotonesProductos
+ * @return {NodeList} - Los elementos de los botones de productos.
  */
-
-function mostrarMensajeCompra() {
-  mensajeCompra.style.display = "block";
-  mensajeCompra.style.top = "50%";
-
-  setTimeout(function () {
-    mensajeCompra.style.top = "-100%";
-    setTimeout(function () {
-      mensajeCompra.style.display = "none";
-    }, 500);
-  }, 2000);
-}
+const botonesProductos = document.querySelectorAll(".boton-producto");
 
 /**
- * Genera un ticket donde especifica la compra realizada
- * @method: generarTicket
+ * Agrega un evento de clic a cada botón de producto para realizar acciones cuando se presiona.
+ * @method agregarEventoClickBotonesProductos
  */
+botonesProductos.forEach((boton) => {
+  boton.addEventListener("click", function () {
+    const nombre = boton.getAttribute("data-nombre");
+    const precio = parseFloat(boton.getAttribute("data-precio"));
 
-function generarTicket() {
-  const ctx = ticketCanvas.getContext("2d");
-  ctx.clearRect(0, 0, ticketCanvas.width, ticketCanvas.height);
-  ctx.font = "14px Times new roman";
-  ctx.fillStyle = "#000";
-  ctx.fillText("Ticket de Compra", 10, 20);
-
-  let y = 40;
-  carrito.forEach((item) => {
-    ctx.fillText(`${item.nombre} - Precio: $${item.precio.toFixed(2)}`, 10, y);
-    y += 20;
+    agregarAlCarrito(nombre, precio);
   });
-
-  ctx.fillText(`Total: $${total.toFixed(2)}`, 10, y + 20);
-}
+});
