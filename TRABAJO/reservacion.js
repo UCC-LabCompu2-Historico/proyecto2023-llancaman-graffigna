@@ -1,85 +1,59 @@
 /**
- * Agrega un evento de escucha al formulario para prevenir el comportamiento predeterminado de envío.
- * @method agregarEventoSubmitFormulario
- * @param {Event} event - El evento de envío del formulario.
- * @return {void}
+ * Ejecuta una función cuando el contenido del documento ha sido completamente cargado.
+ * @method addEventListener
+ * @param {string} evento - El evento al que se va a suscribir ("DOMContentLoaded" en este caso).
+ * @param {function} callback - La función que se ejecutará cuando se dispare el evento.
  */
+document.addEventListener("DOMContentLoaded", function () {
+  /**
+   * Obtiene el elemento del documento con el ID "miFormulario".
+   * @method getElementById
+   * @param {string} id - El ID del elemento a buscar ("miFormulario" en este caso).
+   * @return {object} Retorna el elemento del documento con el ID especificado.
+   */
+  var formulario = document.getElementById("miFormulario");
 
-document
-  .getElementById("miFormulario")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+  /**
+   * Obtiene el elemento del documento con el ID "telefono".
+   * @method getElementById
+   * @param {string} id - El ID del elemento a buscar ("telefono" en este caso).
+   * @return {object} Retorna el elemento del documento con el ID especificado.
+   */
+  var telefonoInput = document.getElementById("telefono");
 
-    /**
-     * Obtiene los valores de los campos del formulario.
-     * @method obtenerValoresFormulario
-     * @return {void}
-     */
+  /**
+   * Escucha el evento de envío del formulario y realiza validaciones.
+   * @method addEventListener
+   * @param {string} evento - El evento al que se va a suscribir ("submit" en este caso).
+   * @param {function} callback - La función que se ejecutará cuando se dispare el evento.
+   */
+  formulario.addEventListener("submit", function (event) {
+    if (formulario.checkValidity()) {
+      /**
+       * Obtiene el valor del campo de entrada de teléfono.
+       * @property value
+       * @type {string} Valor actual del campo de entrada.
+       */
+      var telefono = telefonoInput.value;
 
-    var nombre = document.getElementById("nombre").value;
-    var email = document.getElementById("email").value;
-    var telefono = document.getElementById("telefono").value;
-    var Hora = document.getElementById("Hora").value;
+      if (!esNumeroTelefono(telefono)) {
+        event.preventDefault();
 
-    /**
-     * Realiza la validación de los campos del formulario y muestra un mensaje correspondiente.
-     * @method validarFormulario
-     * @return {void}
-     */
-
-    if (Hora && nombre && email && validarTelefono(telefono)) {
-      mostrarMensaje("¡Muchas gracias por completar el formulario!");
-      document.getElementById("miFormulario").reset();
-      document.getElementById("telefono").classList.remove("invalido");
-    } else {
-      mostrarMensaje(
-        "Por favor, completa todos los campos del formulario correctamente."
-      );
-      document.getElementById("telefono").classList.add("invalido");
+        alert("El número de teléfono debe contener solo números.");
+      } else {
+        alert("Gracias por completar el formulario");
+      }
     }
   });
 
-/**
- * Asocia un evento de entrada al elemento con ID "telefono" para validar el número de teléfono ingresado.
- * @method eventListenerTelefono
- * @return {void}
- */
-
-document.getElementById("telefono").addEventListener("input", function () {
-  var telefono = this.value;
-  if (validarTelefono(telefono)) {
-    this.classList.remove("invalido");
-  } else {
-    this.classList.add("invalido");
+  /**
+   * Verifica si un número dado consiste únicamente en dígitos numéricos.
+   * @method esNumeroTelefono
+   * @param {string} numero - El número a verificar.
+   * @return {boolean} Retorna true si el número consiste únicamente en dígitos numéricos, de lo contrario retorna false.
+   */
+  function esNumeroTelefono(numero) {
+    var regex = /^[0-9]+$/;
+    return regex.test(numero);
   }
 });
-
-/**
- * Muestra un mensaje en un elemento específico.
- * @method mostrarMensaje
- * @param {string} mensaje - El mensaje que se mostrará.
- * @return {void}
- */
-
-function mostrarMensaje(mensaje) {
-  var mensajeElemento = document.getElementById("mensaje");
-  mensajeElemento.textContent = mensaje;
-  mensajeElemento.classList.add("animacion");
-
-  setTimeout(function () {
-    mensajeElemento.classList.remove("animacion");
-    mensajeElemento.textContent = "";
-  }, 3000);
-}
-
-/**
- * Valida un número de teléfono de 10 dígitos.
- * @method validarTelefono
- * @param {string} telefono - El número de teléfono a validar.
- * @return {boolean} - Devuelve true si el número de teléfono es válido, de lo contrario devuelve false.
- */
-
-function validarTelefono(telefono) {
-  var patron = /^\d{10}$/;
-  return patron.test(telefono);
-}
