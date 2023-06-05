@@ -84,48 +84,6 @@ nav.avenida {
   cursor: pointer;
 }
 
-.boton2 {
-  margin-left: 600px;
-  display: inline-block;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: #101114;
-  color: #ffffff;
-  text-decoration: none;
-  width: 340px;
-  border-radius: 4px;
-}
-
 #miFormulario button[type="submit"]:hover {
   background-color: #1ade24;
-}
-
-#mensaje {
-  font-size: 18px;
-  text-align: center;
-  padding: 10px;
-  background-color: #f50606;
-  border: 1px solid #ec0303;
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.9s ease-in-out;
-}
-
-.animacion {
-  opacity: 1;
-  animation-name: fadeIn;
-  animation-duration: 2s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.invalido {
-  background-color: red;
 }
