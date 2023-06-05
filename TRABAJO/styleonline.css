@@ -142,20 +142,6 @@ ul {
   transform: rotate(360deg);
 }
 
-.mensaje-compra {
-  display: none;
-  position: fixed;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  background-color: red;
-  color: white;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: top 0.5s ease;
-}
-
 canvas {
   height: 200px;
   width: 400px;
