@@ -1,94 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="Graffigna Facundo--Llancaman Agustin" name="autores"/>
+    <meta content="Web restaurante el fogon" name="descripcion"/>
+    <meta content="menu, carne , variacion " name="palabras clave"/>
     <title>El fogon</title>
-    <link rel="stylesheet" href="./styleonline.css" />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo">
+    <link rel="stylesheet" href="./style.css"/>
+    <link
+            rel="shortcut icon"
+            href="FOTOS/Captura de pantalla 2023-04-05 082418.ico"
+            type="image/x-icon"
+    />
+</head>
+<body>
+<header>
+    <a href="#" class="logo">
         <img
-          src="./FOTOS/Captura de pantalla 2023-04-05 082418.png"
-          alt="imagen principal"
+                src="./FOTOS/Captura de pantalla 2023-04-05 082418.png"
+                alt="imagen principal"
         />
-      </a>
-      <a href="Index.html" class="inicio">INICIO</a>
-      <a href="Menu.html" class="nav-link">MENU</a>
-      <a href="Reservaciones.html" class="nav-link">RESERVACIONES</a>
-      <a href="Pedir Online.html" class="nav-link">PEDIDO ONLINE</a>
-      <a href="Contacto.html" class="nav-link">CONTACTO</a>
-    </header>
+    </a>
+    <a href="Index.html" class="inicio">INICIO</a>
+    <a href="Menu.html" class="nav-link">MENU</a>
+    <a href="Reservaciones.html" class="nav-link">RESERVACIONES</a>
+    <a href="PedirOnline.html" class="nav-link">PEDIDO ONLINE</a>
+    <a href="Contacto.html" class="nav-link">CONTACTO</a>
+</header>
 
-    <nav class="avenida">
-      Armenia, 5105, Buenos Aires, Arg. Tel. +54-351-311-6877
-    </nav>
-    <body>
-      <h1>Carrito de Compras</h1>
-      <div class="container">
-        <div class="productos">
-          <div class="producto">
-            <img src="FOTOS/fritas-menu.jpg" alt="Empanadas fritas" />
+<nav class="avenida">
+    Armenia, 5105, Buenos Aires, Arg. Tel. +54-351-311-6877
+</nav>
+<h1>Carrito de Compras</h1>
+<div class="container">
+    <div class="productos">
+        <div class="producto">
+            <img src="FOTOS/fritas-menu.jpg" alt="Empanadas fritas"/>
             <h3>Empanadas fritas</h3>
             <p class="precio">$300 (c/u)</p>
             <button onclick="agregarAlCarrito('Empanadas fritas', 300)">
-              Agregar al carrito
+                Agregar al carrito
             </button>
-          </div>
+        </div>
 
-          <div class="producto">
-            <img src="FOTOS/carne-MENU.jpg" alt="Carnes a la parrilla" />
+        <div class="producto">
+            <img src="FOTOS/carne-MENU.jpg" alt="Carnes a la parrilla"/>
             <h3>Carnes a la parrilla</h3>
             <p class="precio">$3200</p>
             <button onclick="agregarAlCarrito('Carnes a la parrilla', 3200)">
-              Agregar al carrito
+                Agregar al carrito
             </button>
-          </div>
+        </div>
 
-          <div class="producto">
-            <img src="FOTOS/achuras-menu.jpg" alt="Achuras asadas" />
+        <div class="producto">
+            <img src="FOTOS/achuras-menu.jpg" alt="Achuras asadas"/>
             <h3>Achuras asadas</h3>
             <p class="precio">$1750</p>
             <button onclick="agregarAlCarrito('Achuras asadas', 1750)">
-              Agregar al carrito
+                Agregar al carrito
             </button>
-          </div>
+        </div>
 
-          <div class="producto">
-            <img src="FOTOS/sand-menu.jpg" alt="Sandwich cacero" />
+        <div class="producto">
+            <img src="FOTOS/sand-menu.jpg" alt="Sandwich cacero"/>
             <h3>Sandwich casero</h3>
             <p class="precio">$2500</p>
             <button onclick="agregarAlCarrito('Sandwich cacero', 2500)">
-              Agregar al carrito
+                Agregar al carrito
             </button>
-          </div>
+        </div>
 
-          <div class="producto">
-            <img src="FOTOS/picada-menu.jpg" alt="Picadas regionales" />
+        <div class="producto">
+            <img src="FOTOS/picada-menu.jpg" alt="Picadas regionales"/>
             <h3>Picadas regionales</h3>
             <p class="precio">$4500 (2 p)</p>
             <button onclick="agregarAlCarrito('Picadas regionales', 4500)">
-              Agregar al carrito
+                Agregar al carrito
             </button>
-          </div>
         </div>
+    </div>
 
-        <div class="carrito">
-          <h2>Carrito</h2>
-          <ul id="lista-carrito"></ul>
-          <p class="total">Total: <span id="total-carrito">$0.00</span></p>
-          <button onclick="vaciarCarrito()">Vaciar carrito</button>
-          <button id="boton-compra" class="boton-compra">Comprar</button>
-        </div>
-      </div>
+    <div class="carrito">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p class="total">Total: <span id="total-carrito">$0.00</span></p>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        <button id="boton-compra" class="boton-compra">Comprar</button>
+    </div>
+</div>
 
-      <ul id="lista-carrito"></ul>
+<canvas id="ticket"></canvas>
 
-      <canvas id="ticket"></canvas>
-
-      <script src="carrito.js"></script>
-    </body>
-  </body>
+<script src="carrito.js"></script>
+</body>
 </html>

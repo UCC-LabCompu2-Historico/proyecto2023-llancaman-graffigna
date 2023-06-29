@@ -17,14 +17,14 @@ let total = 0;
  * @param {number} precio - El precio del producto a agregar.
  */
 function agregarAlCarrito(nombre, precio) {
-  if (carrito.length >= 6) {
-    alert("No puedes agregar más de 6 productos al carrito.");
-    return;
-  }
+    if (carrito.length >= 6) {
+        alert("No puedes agregar más de 6 productos al carrito.");
+        return;
+    }
 
-  carrito.push({ nombre, precio });
-  total += precio;
-  actualizarCarrito();
+    carrito.push({nombre, precio});
+    total += precio;
+    actualizarCarrito();
 }
 
 /**
@@ -32,17 +32,17 @@ function agregarAlCarrito(nombre, precio) {
  * @method actualizarCarrito
  */
 function actualizarCarrito() {
-  const listaCarrito = document.getElementById("lista-carrito");
-  const totalCarrito = document.getElementById("total-carrito");
-  listaCarrito.innerHTML = "";
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalCarrito = document.getElementById("total-carrito");
+    listaCarrito.innerHTML = "";
 
-  carrito.forEach((item) => {
-    const li = document.createElement("li");
-    li.innerText = `${item.nombre} - Precio: $${item.precio.toFixed(2)}`;
-    listaCarrito.appendChild(li);
-  });
+    carrito.forEach((item) => {
+        const li = document.createElement("li");
+        li.innerText = `${item.nombre} - Precio: $${item.precio.toFixed(2)}`;
+        listaCarrito.appendChild(li);
+    });
 
-  totalCarrito.innerText = `$${total.toFixed(2)}`;
+    totalCarrito.innerText = `$${total.toFixed(2)}`;
 }
 
 /**
@@ -50,25 +50,25 @@ function actualizarCarrito() {
  * @method actualizarTicket
  */
 function actualizarTicket() {
-  const canvas = document.getElementById("ticket");
-  const context = canvas.getContext("2d");
+    const canvas = document.getElementById("ticket");
+    const context = canvas.getContext("2d");
 
-  context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
-  context.font = "14px Arial";
+    context.font = "14px Arial";
 
-  let yPos = 20;
+    let yPos = 20;
 
-  carrito.forEach((item, index) => {
-    context.fillText(
-      `${item.nombre} - Precio: $${item.precio.toFixed(2)}`,
-      20,
-      yPos
-    );
-    yPos += 20;
-  });
+    carrito.forEach((item) => {
+        context.fillText(
+            `${item.nombre} - Precio: $${item.precio.toFixed(2)}`,
+            20,
+            yPos
+        );
+        yPos += 20;
+    });
 
-  context.fillText(`Total: $${total.toFixed(2)}`, 20, yPos + 10);
+    context.fillText(`Total: $${total.toFixed(2)}`, 20, yPos + 10);
 }
 
 /**
@@ -76,9 +76,9 @@ function actualizarTicket() {
  * @method vaciarCarrito
  */
 function vaciarCarrito() {
-  carrito = [];
-  total = 0;
-  actualizarCarrito();
+    carrito = [];
+    total = 0;
+    actualizarCarrito();
 }
 
 /**
@@ -93,16 +93,16 @@ const botonCompra = document.getElementById("boton-compra");
  * @method agregarEventoClickBotonCompra
  */
 botonCompra.addEventListener("click", function () {
-  if (carrito.length < 1) {
-    alert("Debes agregar al menos 1 producto al carrito.");
-    return;
-  }
+    if (carrito.length < 1) {
+        alert("Debes agregar al menos 1 producto al carrito.");
+        return;
+    }
 
-  botonCompra.classList.add("animacion");
-  actualizarTicket(); // Actualizar el contenido del ticket
-  carrito = [];
-  total = 0;
-  actualizarCarrito();
+    botonCompra.classList.add("animacion");
+    actualizarTicket();
+    carrito = [];
+    total = 0;
+    actualizarCarrito();
 });
 
 /**
@@ -117,10 +117,10 @@ const botonesProductos = document.querySelectorAll(".boton-producto");
  * @method agregarEventoClickBotonesProductos
  */
 botonesProductos.forEach((boton) => {
-  boton.addEventListener("click", function () {
-    const nombre = boton.getAttribute("data-nombre");
-    const precio = parseFloat(boton.getAttribute("data-precio"));
+    boton.addEventListener("click", function () {
+        const nombre = boton.getAttribute("data-nombre");
+        const precio = parseFloat(boton.getAttribute("data-precio"));
 
-    agregarAlCarrito(nombre, precio);
-  });
+        agregarAlCarrito(nombre, precio);
+    });
 });
