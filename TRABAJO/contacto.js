@@ -1,7 +1,6 @@
 /**
- * Agrega un evento de envío al formulario para prevenir el comportamiento predeterminado.
- * @method agregarEventoEnvioFormulario
- * @param {Event} event - El evento de envío del formulario.
+ * Deshabilita el comportamiento predeterminado del envío del formulario y previene que la página se recargue.
+ * @method prevenirEnvioFormulario
  */
 
 document
