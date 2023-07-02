@@ -31,31 +31,14 @@ document
 
         if (nombre && email && asunto && mensaje2) {
             if (/^[a-zA-Z]+$/.test(nombre)) {
-                mostrarMensaje("¡Muchas gracias por completar el formulario!");
+                alert("¡Muchas gracias por completar el formulario!");
                 document.getElementById("miFormulario2").reset();
             } else {
                 alert("Por favor, ingresa solo letras en el campo nombre.");
             }
         } else {
-            mostrarMensaje(
+            alert(
                 "Por favor, completa todos los campos del formulario correctamente."
             );
         }
     });
-
-/**
- * Muestra un mensaje en pantalla con animación.
- * @method mostrarMensaje
- * @param {string} mensaje - El mensaje a mostrar.
- */
-
-function mostrarMensaje(mensaje) {
-    let mensajeElemento = document.getElementById("mensaje3");
-    mensajeElemento.textContent = mensaje;
-    mensajeElemento.classList.add("animacion2");
-
-    setTimeout(function () {
-        mensajeElemento.classList.remove("animacion2");
-        mensajeElemento.textContent = "";
-    }, 3000);
-}
