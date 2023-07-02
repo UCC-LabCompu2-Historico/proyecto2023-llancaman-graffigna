@@ -55,10 +55,19 @@ function actualizarTicket() {
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    context.font = "14px Arial";
 
+    let rotation = 0;
+    const animate = () => {
+        rotation += 6;
+        canvas.style.transform = `rotate(${rotation}deg)`;
+        if (rotation < 360) {
+            requestAnimationFrame(animate);
+        }
+    };
+    animate();
+
+    context.font = "14px ";
     let yPos = 20;
-
     carrito.forEach((item) => {
         context.fillText(
             `${item.nombre} - Precio: $${item.precio.toFixed(2)}`,
@@ -67,7 +76,6 @@ function actualizarTicket() {
         );
         yPos += 20;
     });
-
     context.fillText(`Total: $${total.toFixed(2)}`, 20, yPos + 10);
 }
 
@@ -98,7 +106,6 @@ botonCompra.addEventListener("click", function () {
         return;
     }
 
-    botonCompra.classList.add("animacion");
     actualizarTicket();
     carrito = [];
     total = 0;
