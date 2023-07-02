@@ -57,6 +57,11 @@ function actualizarTicket() {
 
 
     let rotation = 0;
+
+    /**
+     * Realiza una animación de rotación gradualmente aumentando el valor de rotación en 6 grados en cada iteración.
+     * @method animate
+     */
     const animate = () => {
         rotation += 6;
         canvas.style.transform = `rotate(${rotation}deg)`;
@@ -68,6 +73,11 @@ function actualizarTicket() {
 
     context.font = "14px ";
     let yPos = 20;
+
+    /**
+     * Itera sobre los elementos del carrito y muestra el nombre y precio de cada artículo en un lienzo o contexto gráfico.
+     * @method mostrarItemsCarrito
+     */
     carrito.forEach((item) => {
         context.fillText(
             `${item.nombre} - Precio: $${item.precio.toFixed(2)}`,
