@@ -21,10 +21,12 @@ function agregarAlCarrito(nombre, precio) {
         alert("No puedes agregar más de 6 productos al carrito.");
         return;
     }
-
     carrito.push({nombre, precio});
     total += precio;
     actualizarCarrito();
+    const canvas = document.getElementById("ticket");
+    const context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 /**
@@ -35,13 +37,11 @@ function actualizarCarrito() {
     const listaCarrito = document.getElementById("lista-carrito");
     const totalCarrito = document.getElementById("total-carrito");
     listaCarrito.innerHTML = "";
-
     carrito.forEach((item) => {
         const li = document.createElement("li");
         li.innerText = `${item.nombre} - Precio: $${item.precio.toFixed(2)}`;
         listaCarrito.appendChild(li);
     });
-
     totalCarrito.innerText = `$${total.toFixed(2)}`;
 }
 
@@ -52,10 +52,7 @@ function actualizarCarrito() {
 function actualizarTicket() {
     const canvas = document.getElementById("ticket");
     const context = canvas.getContext("2d");
-
     context.clearRect(0, 0, canvas.width, canvas.height);
-
-
     let rotation = 0;
 
     /**
@@ -70,7 +67,6 @@ function actualizarTicket() {
         }
     };
     animate();
-
     context.font = "14px ";
     let yPos = 20;
 
@@ -115,7 +111,6 @@ botonCompra.addEventListener("click", function () {
         alert("Debes agregar al menos 1 producto al carrito.");
         return;
     }
-
     actualizarTicket();
     carrito = [];
     total = 0;
@@ -137,7 +132,6 @@ botonesProductos.forEach((boton) => {
     boton.addEventListener("click", function () {
         const nombre = boton.getAttribute("data-nombre");
         const precio = parseFloat(boton.getAttribute("data-precio"));
-
         agregarAlCarrito(nombre, precio);
     });
 });
