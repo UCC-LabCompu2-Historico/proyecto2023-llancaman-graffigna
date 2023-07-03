@@ -273,22 +273,13 @@ h2 {
     border-radius: 25px;
 }
 
-.lugar img {
-    filter: blur(0px);
-    transition: filter 0.3s ease-in;
-    transform: scale(1.1);
-}
-
 .tipo {
     font-size: 1.5em;
     font-weight: bold;
     text-decoration: none;
-    z-index: 1;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
     opacity: 0;
     transition: opacity 0.5s;
     background: rgba(90, 0, 10, 0.4);
