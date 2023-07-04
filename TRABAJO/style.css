@@ -91,16 +91,6 @@ nav.avenida {
     border-radius: 5px;
 }
 
-#contacto input[type="submit"] {
-    background-color: black;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .redes {
     width: 1536px;
     height: 91px;
