@@ -184,9 +184,6 @@ article.parte3 {
     width: 1519px;
     height: 569px;
     background-color: #a1744a;
-}
-
-article.parte3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
