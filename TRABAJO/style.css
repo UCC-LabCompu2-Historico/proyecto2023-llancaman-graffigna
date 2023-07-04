@@ -295,16 +295,6 @@ h2 {
     border-radius: 25px;
 }
 
-@media (hover: none) {
-    .tipo {
-        opacity: 1;
-    }
-
-    .lugar img {
-        filter: blur(2px);
-    }
-}
-
 .container {
     max-width: 800px;
     margin: auto;
