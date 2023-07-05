@@ -335,7 +335,7 @@ button {
 }
 
 button:hover {
-    background-color: #8A6340;
+    background-color: #408a70;
 }
 
 .carrito {
@@ -403,7 +403,7 @@ canvas {
 }
 
 #miFormulario input {
-    width: 100%;
+    width: 96%;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
