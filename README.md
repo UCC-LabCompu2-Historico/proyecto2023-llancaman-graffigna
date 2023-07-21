@@ -4,7 +4,7 @@
 ## Autores:
  - Graffigna Facundo
  - Llancaman Agustin
-## Link de gh-pages: [Link de la página](https://ucc-labcompu2.github.io/proyecto2023-llancaman-graffigna/TRABAJO/Index.html)
+## Link de gh-pages: [Link de la página](https://ucc-labcompu2-historico.github.io/proyecto2023-llancaman-graffigna/TRABAJO/Index.html)
 ## Contenido de la página:
 - Ofrece un vistazo página del establecimiento, como la variedad de cortes de carne, los acompañamientos y los precios. Además, los usuarios pueden reservar una mesa en línea, ver el horario para dicha reserva, y encontrar información sobre la ubicación y cómo llegar allí. También pueden ver fotos de los platos del menú.
 ## Tecnologias implementadas:
